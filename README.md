@@ -9,27 +9,27 @@
 
 ---
 
-## 📋 À propos
+## À propos
 
 Site web vitrine de **Vision Mobile Studio (VMS)**, une entreprise située à Yaoundé (Cameroun), immeuble BOKAM face marché central. VMS offre une gamme complète de services créatifs allant du design graphique à la production vidéo.
 
-## 🌐 Pages du site
+## Pages du site
 
-| Page | Description |
-|------|-------------|
-| **Accueil** (`index.html`) | Page d'accueil avec hero section, carrousel d'images et aperçu des services |
-| **À Propos** (`about.html`) | Présentation de l'entreprise et de l'équipe |
-| **Services** (`services.html`) | Catalogue complet des services avec portfolio de réalisations |
-| **Contact** (`contact.html`) | Formulaire de contact fonctionnel + coordonnées |
+| Page                           | Description                                                                 |
+| ------------------------------ | --------------------------------------------------------------------------- |
+| **Accueil** (`index.html`)     | Page d'accueil avec hero section, carrousel d'images et aperçu des services |
+| **À Propos** (`about.html`)    | Présentation de l'entreprise et de l'équipe                                 |
+| **Services** (`services.html`) | Catalogue complet des services avec portfolio de réalisations               |
+| **Contact** (`contact.html`)   | Formulaire de contact fonctionnel + coordonnées                             |
 
-## 🛠️ Services proposés
+## Services proposés
 
-- 🎨 **Design** — Carte de visite, Flyers, Dépliants, Retouche Photo, Photo Montage, Banderoles, Roll-up, Magazines, Livres Photos
-- 🎬 **Montage Vidéo** — Documentaires, Magazines, Spots d'entreprises, Mariages, Obsèques
-- 📝 **Édition** — Magazines, Rapports de travail/stage, Mémoires & Thèses, Formatage de texte, Livres
-- 🖨️ **Impression** — Couleur/N&B (A6 à A3), Agrandissement photos, Programme Obsèques, Billets mariages, Livres
+- **Design** — Carte de visite, Flyers, Dépliants, Retouche Photo, Photo Montage, Banderoles, Roll-up, Magazines, Livres Photos
+- **Montage Vidéo** — Documentaires, Magazines, Spots d'entreprises, Mariages, Obsèques
+- **Édition** — Magazines, Rapports de travail/stage, Mémoires & Thèses, Formatage de texte, Livres
+- **Impression** — Couleur/N&B (A6 à A3), Agrandissement photos, Programme Obsèques, Billets mariages, Livres
 
-## 📁 Structure du projet
+## Structure du projet
 
 ```
 Projet 2 (VMS)/
@@ -56,7 +56,7 @@ Projet 2 (VMS)/
 └── README.md
 ```
 
-## ⚙️ Technologies
+## Technologies
 
 - **HTML5** — Structure sémantique avec balises `<nav>`, `<main>`, `<section>`, `<footer>`
 - **CSS3** — Architecture modulaire, design responsive, animations au scroll
@@ -64,22 +64,23 @@ Projet 2 (VMS)/
 - **EmailJS** — Envoi d'emails directement depuis le formulaire de contact (sans backend)
 - **SVG** — Icônes vectorielles intégrées (réseaux sociaux, coordonnées)
 
-## 📬 Formulaire de contact
+## Formulaire de contact
 
 Le formulaire de contact envoie les messages directement par email via **[EmailJS](https://www.emailjs.com/)**. Les champs collectés sont :
 
-| Champ | Description | Requis |
-|-------|-------------|--------|
-| Nom | Nom du client | ✅ |
-| Commande | Description de la commande | ✅ |
-| Téléphone | Numéro de téléphone | ✅ |
-| E-mail | Adresse email du client | ✅ |
-| Date souhaitée | Date de livraison souhaitée | ❌ |
-| Localisation | Quartier du client | ❌ |
+| Champ          | Description                 | Requis |
+| -------------- | --------------------------- | ------ |
+| Nom            | Nom du client               |        |
+| Commande       | Description de la commande  |        |
+| Téléphone      | Numéro de téléphone         |        |
+| E-mail         | Adresse email du client     |        |
+| Date souhaitée | Date de livraison souhaitée |        |
+| Localisation   | Quartier du client          |        |
 
-## 🚀 Installation & Utilisation
+## Installation & Utilisation
 
 1. **Cloner le dépôt**
+
    ```bash
    git clone https://github.com/damso667/site-presentation.git
    ```
@@ -87,7 +88,7 @@ Le formulaire de contact envoie les messages directement par email via **[EmailJ
 2. **Ouvrir le site**
    Ouvrir `HTML/index.html` dans un navigateur web.
 
-   > 💡 Pour un meilleur rendu, utiliser un serveur local comme **Live Server** (extension VS Code).
+   > Pour un meilleur rendu, utiliser un serveur local comme **Live Server** (extension VS Code).
 
 3. **Configuration EmailJS** (si modification nécessaire)
    Les identifiants EmailJS se trouvent dans `JAVASCRIPT/forms.js` :
@@ -95,15 +96,16 @@ Le formulaire de contact envoie les messages directement par email via **[EmailJ
    - `Template ID`
    - `Public Key`
 
-## 📱 Responsive
+## Responsive
 
 Le site est entièrement responsive avec :
+
 - Navigation hamburger pour mobile
 - Grilles adaptatives pour le portfolio
 - Carrousels tactiles
 - Formulaire adapté aux écrans de toutes tailles
 
-## 📍 Contact
+## Contact
 
 - **Adresse** : Cameroun, Yaoundé — Immeuble BOKAM face marché central
 - **Téléphone** : +237 677 859 821 / 690 133 973
