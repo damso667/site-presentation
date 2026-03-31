@@ -1,0 +1,126 @@
+/* ============================================
+   FOOTER.CSS — Pied de page unifié
+   Vision Mobile Studio
+   ============================================ */
+
+footer {
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    color: var(--couleur-blanc);
+    padding: 40px 5%;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-brand h3 {
+    font-size: 1.4rem;
+    color: var(--couleur-secondaire);
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    font-size: 0.9rem;
+    color: #aaa;
+    line-height: 1.5;
+}
+
+.footer-contact {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-contact h4 {
+    font-size: 1.1rem;
+    color: var(--couleur-secondaire);
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.footer-social {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-social h4 {
+    font-size: 1.1rem;
+    color: var(--couleur-secondaire);
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+    color: #ccc;
+}
+
+.social-links a svg {
+    width: 20px;
+    height: 20px;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background: var(--couleur-principale);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 4px 15px rgba(227, 6, 19, 0.4);
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.footer-bottom span {
+    color: var(--couleur-secondaire);
+    font-weight: bold;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    footer {
+        padding: 30px 5%;
+    }
+}

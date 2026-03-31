@@ -1,0 +1,53 @@
+/* ============================================
+   ABOUT.CSS — Page À propos spécifique
+   Vision Mobile Studio
+   ============================================ */
+
+.about-hero {
+    text-align: center;
+    padding: 60px 5% 30px;
+}
+
+.about-hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    font-style: italic;
+}
+
+.about-hero p strong {
+    color: var(--couleur-principale);
+}
+
+.about-details {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 40px;
+    background: var(--couleur-blanc);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-rouge);
+}
+
+.about-details ul {
+    display: grid;
+    gap: 25px;
+}
+
+.about-details li {
+    padding: 20px 25px;
+    background: var(--couleur-fond-clair);
+    border-radius: var(--radius-md);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    border-left: 4px solid var(--couleur-principale);
+    transition: var(--transition);
+}
+
+.about-details li:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-sm);
+    background: var(--couleur-blanc);
+}

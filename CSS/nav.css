@@ -1,0 +1,153 @@
+/* ============================================
+   NAV.CSS — Navigation unifiée
+   Vision Mobile Studio
+   ============================================ */
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background-color: var(--couleur-fond);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+nav .logo {
+    max-width: 100px;
+    transition: var(--transition);
+}
+
+nav .logo:hover {
+    transform: scale(1.05);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navigation li a {
+    position: relative;
+    color: var(--couleur-principale);
+    border: 1.5px solid var(--couleur-secondaire);
+    border-radius: var(--radius-sm);
+    padding: 8px 18px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.navigation li a:hover,
+.navigation li a.active {
+    background-color: var(--couleur-principale);
+    border-color: var(--couleur-principale);
+    color: var(--couleur-blanc);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(227, 6, 19, 0.3);
+}
+
+/* --- Menu Hamburger --- */
+.menu-hand {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 1100;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-hand span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--couleur-principale);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.menu-hand.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-hand.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-hand.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* --- Responsive --- */
+@media (max-width: 991px) {
+    .navigation {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 320px;
+        height: 100vh;
+        background-color: var(--couleur-fond);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+        transition: right 0.4s ease;
+        z-index: 1000;
+    }
+
+    .navigation.show {
+        right: 0;
+    }
+
+    .navigation li a {
+        font-size: 1.1rem;
+        padding: 12px 30px;
+    }
+
+    .menu-hand {
+        display: flex;
+    }
+
+    /* Overlay */
+    .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .nav-overlay.show {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 8px 4%;
+    }
+
+    nav .logo {
+        max-width: 70px;
+    }
+}

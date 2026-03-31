@@ -1,0 +1,216 @@
+/* ============================================
+   GLOBAL.CSS — Variables, Reset & Typographie
+   Vision Mobile Studio
+   ============================================ */
+
+/* --- Variables CSS --- */
+:root {
+  --couleur-principale: rgb(227, 6, 19);
+  --couleur-secondaire: rgb(241, 72, 84);
+  --couleur-fond: wheat;
+  --couleur-fond-clair: rgb(241, 225, 195);
+  --couleur-texte: #1a1a1a;
+  --couleur-blanc: #ffffff;
+  --couleur-noir: #000000;
+
+  --font-principale: "Cambria", "Georgia", "Times New Roman", serif;
+  --font-titres: "Cambria", "Cochin", "Georgia", serif;
+  --font-ui: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
+
+  --radius-sm: 5px;
+  --radius-md: 10px;
+  --radius-lg: 15px;
+  --radius-xl: 20px;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.15);
+  --shadow-rouge: 0 0 15px rgba(227, 6, 19, 0.25);
+
+  --transition: 0.3s ease;
+  --transition-lente: 0.5s ease;
+}
+
+/* --- Reset --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-principale);
+  font-size: 1.1rem;
+  color: var(--couleur-texte);
+  background-color: var(--couleur-fond);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-titres);
+  line-height: 1.3;
+}
+
+/* --- Utilitaires --- */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--couleur-principale);
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/* --- Boutons --- */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  color: var(--couleur-blanc);
+  background: linear-gradient(
+    135deg,
+    var(--couleur-principale),
+    var(--couleur-secondaire)
+  );
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: var(--font-principale);
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(227, 6, 19, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(227, 6, 19, 0.4);
+  letter-spacing: 1.5px;
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--couleur-principale);
+  color: var(--couleur-principale);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: var(--couleur-principale);
+  color: var(--couleur-blanc);
+}
+
+/* --- Cards --- */
+.card {
+  background: var(--couleur-blanc);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* --- Animations --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* --- Responsive de base --- */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+}

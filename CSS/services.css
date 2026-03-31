@@ -1,0 +1,159 @@
+/* ============================================
+   SERVICES.CSS — Page Services spécifique
+   Vision Mobile Studio
+   ============================================ */
+
+.services-header {
+    text-align: center;
+    padding: 40px 5% 20px;
+}
+
+.services-header h2 {
+    font-size: 2.5rem;
+    font-style: italic;
+}
+
+.services-header h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--couleur-principale);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.services-header p {
+    max-width: 700px;
+    margin: 15px auto 0;
+    color: #555;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* --- Catégorie de service --- */
+.service-category {
+    padding: 30px 5%;
+}
+
+.service-category h4 {
+    font-size: 1.6rem;
+    color: rgb(0, 102, 51);
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.service-category h4::before {
+    content: '★';
+    margin-right: 8px;
+    color: var(--couleur-principale);
+}
+
+/* --- Tags de services --- */
+.service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.service-tag {
+    padding: 8px 20px;
+    background: var(--couleur-blanc);
+    border: 1.5px solid var(--couleur-fond-clair);
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--couleur-texte);
+    transition: var(--transition);
+    cursor: default;
+}
+
+.service-tag:hover {
+    background: var(--couleur-principale);
+    color: var(--couleur-blanc);
+    border-color: var(--couleur-principale);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(227, 6, 19, 0.3);
+}
+
+/* --- Galerie portfolio --- */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 5%;
+    margin-bottom: 30px;
+}
+
+.portfolio-item {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+}
+
+.portfolio-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 50%, rgba(227, 6, 19, 0.15));
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.portfolio-item:hover::after {
+    opacity: 1;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+/* --- Services carousel section --- */
+.services-showcase {
+    padding: 20px 5%;
+    text-align: center;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .portfolio-item img {
+        height: 200px;
+    }
+
+    .service-category h4 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-header h2 {
+        font-size: 1.8rem;
+    }
+}
