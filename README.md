@@ -1,4 +1,4 @@
-# 🎨 Vision Mobile Studio — Site Web Vitrine
+# Vision Mobile Studio — Site Web Vitrine
 
 > **Agence créative spécialisée en Audiovisuel, Design et Édition** — Yaoundé, Cameroun
 
@@ -33,11 +33,10 @@ Site web vitrine de **Vision Mobile Studio (VMS)**, une entreprise située à Ya
 
 ```
 Projet 2 (VMS)/
-├── HTML/
-│   ├── index.html          # Page d'accueil
-│   ├── about.html          # À propos
-│   ├── services.html       # Services & portfolio
-│   └── contact.html        # Formulaire de contact
+├── index.html          # Page d'accueil
+├── about.html          # À propos
+├── services.html       # Services & portfolio
+├── contact.html        # Formulaire de contact
 ├── CSS/
 │   ├── global.css          # Variables, reset & styles globaux
 │   ├── nav.css             # Barre de navigation responsive
@@ -86,7 +85,7 @@ Le formulaire de contact envoie les messages directement par email via **[EmailJ
    ```
 
 2. **Ouvrir le site**
-   Ouvrir `HTML/index.html` dans un navigateur web.
+   Ouvrir `index.html` dans un navigateur web.
 
    > Pour un meilleur rendu, utiliser un serveur local comme **Live Server** (extension VS Code).
 
